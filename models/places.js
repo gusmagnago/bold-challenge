@@ -7,17 +7,29 @@ const placesSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  address: [
+    {
+      street: {
+        type: String
+      },
+      number: {
+        type: Number
+      },
+      zipCode: {
+        type: Number
+      },
+      countryCode: {
+        type: Number
+      }
+    }
+  ],
   location: [
     {
       latitude: {
-        type: Number,
-        min: -180,
-        max: 180
+        type: Number
       },
       longitude: {
-        type: Number,
-        min: -180,
-        max: 180
+        type: Number
       }
     }
   ]

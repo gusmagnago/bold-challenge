@@ -1,16 +1,39 @@
 <div class="container">
-<form>
-  <div class="form-group">
-    <label for="nameThePlace">Name of the Place</label>
-    <input type="text" class="form-control" id="nameThePlace" placeholder="The name of the place">
+  <div class="row">
+    <div class="col">
+      <div class="card ">
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <h4>Name of the place:</h4>
+              <label for="nameThePlace">Name of the Place</label>
+              <input type="text" class="form-control" id="nameThePlace" placeholder="The name of the place">
+            </div>
+            <div class="form-group">
+              <h4>Location:</h4>
+              <label for="nameThePlace">Adress:</label>
+              <input type="text" class="form-control" id="adress" placeholder="The full adress">
+              <label for="latitude">Latitude:</label>
+              <input type="number" class="form-control" id="latitude" placeholder="Latitude">
+              <label for="longitude">Longitude:</label>
+              <input type="number" class="form-control" id="longitude" placeholder="Longitude">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{this.name}}</h5>
+              <p class="card-text">{{this.address}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <h3>Location:</h3>
-    <label for="latitude">Latitude:</label>
-    <input type="number" class="form-control" id="latitude" placeholder="Latitude">
-    <label for="longitude">Longitude:</label>
-    <input type="number" class="form-control" id="longitude" placeholder="Longitude">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
 </div>
