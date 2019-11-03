@@ -11,7 +11,10 @@ const placesSchema = new mongoose.Schema({
     type: String
   },
   number: {
-    type: Number
+    type: String
+  },
+  city: {
+    type: String
   },
   zipCode: {
     type: Number

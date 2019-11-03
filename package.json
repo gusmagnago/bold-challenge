@@ -6,6 +6,7 @@
     "start": "node ./server",
     "dev": "nodemon ./server",
     "dev:debug": "DEBUG=bold-challenge* npm run dev",
+    "db:seed": "node ./server/seeds",
     "lint": "eslint ."
   },
   "dependencies": {
