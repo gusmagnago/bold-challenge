@@ -30,7 +30,7 @@ router.post("/create", (req, res, next) => {
       console.log("a place was created", places);
     })
     .catch(error => {
-      console.log("an error occuried trying to create a user", error);
+      console.log("an error occuried trying to create a place", error);
     });
 });
 // FIND

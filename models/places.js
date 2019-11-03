@@ -30,4 +30,4 @@ const placesSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model("User", placesSchema);
+module.exports = mongoose.model("Places", placesSchema);
