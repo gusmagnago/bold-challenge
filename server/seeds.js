@@ -10,16 +10,28 @@ const URI = process.env.MONGODB_URI;
 database
   .connect(URI)
   .then(() => {
-    const places = [...new Array(5)].fill(null).map(() => ({
-      name: "Point 1",
-      street: "Søren Frichs Vej",
-      number: "44d",
-      city: "Aarhus",
-      zipCode: 8230,
-      contryCode: 45,
-      latitude: 56.151462,
-      longitude: 10.172167
-    }));
+    const places = [
+      {
+        name: "Point 1",
+        street: "Søren Frichs Vej",
+        number: "44d",
+        city: "Aarhus",
+        zipCode: 8230,
+        contryCode: 45,
+        latitude: 56.151462,
+        longitude: 10.172167
+      },
+      {
+        name: "Point 2",
+        street: "Søren Frichs Vej",
+        number: "44d",
+        city: "Aarhus",
+        zipCode: 8230,
+        contryCode: 45,
+        latitude: 56.151462,
+        longitude: 10.172167
+      }
+    ];
     return Places.create(places);
   })
   .then(places => {
