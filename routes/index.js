@@ -26,6 +26,7 @@ router.post("/create", (req, res, next) => {
     longitude
   })
     .then(places => {
+      res.redirect("/create");
       console.log("a place was created", places);
     })
     .catch(error => {

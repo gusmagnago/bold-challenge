@@ -7,16 +7,16 @@
             <div class="form-group">
               <h4>Name of the place:</h4>
               <label for="nameThePlace">Name of the Place</label>
-              <input type="text" class="form-control" id="nameThePlace" placeholder="The name of the place">
+              <input type="text" class="form-control" id="nameThePlace" name="name" placeholder="The name of the place">
             </div>
             <div class="form-group">
               <h4>Location:</h4>
-              <label for="nameThePlace">Adress:</label>
-              <input type="text" class="form-control" id="adress" placeholder="The full adress">
+              <label for="nameThePlace">Street:</label>
+              <input type="text" class="form-control" id="adress" name="street" placeholder="The full adress">
               <label for="latitude">Latitude:</label>
-              <input type="number" class="form-control" id="latitude" placeholder="Latitude">
+              <input type="number" class="form-control" id="latitude" name="latitude" placeholder="Latitude">
               <label for="longitude">Longitude:</label>
-              <input type="number" class="form-control" id="longitude" placeholder="Longitude">
+              <input type="number" class="form-control" id="longitude" name="longitude" placeholder="Longitude">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
@@ -30,6 +30,7 @@
             <div class="card-body">
               <h5 class="card-title">{{this.name}}</h5>
               <p class="card-text">{{this.address}}</p>
+              
             </div>
           </div>
         </div>
