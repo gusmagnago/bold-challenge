@@ -22,12 +22,22 @@ const placesSchema = new mongoose.Schema({
   countryCode: {
     type: Number
   },
-  latitude: {
-    type: Number
+  location: {
+    type: String,
+    default: "Point"
   },
-  longitude: {
-    type: Number
-  }
+  coordinates: [
+    {
+      latitude: {
+        type: Number
+      },
+      longitude: {
+        type: Number
+      }
+    }
+  ]
 });
+
+schema.index({ location: "2dsphere" });
 
 module.exports = mongoose.model("Places", placesSchema);
