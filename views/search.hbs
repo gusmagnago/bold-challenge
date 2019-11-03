@@ -1,1 +1,17 @@
-<h1>this is it</h1>
+<h1>Search a Pick up point</h1>
+<span>
+  You can search by the zipcode, the country code, or find all the points we have around the world.<br />
+  Our locations are distributed in three countries, but we are groing fast, dont worry if you country is not here.
+</span>
+<section class="container">
+{{#each places}}
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+        <p class="card-text">{{this.street}}</p>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</section>
