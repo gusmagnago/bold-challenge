@@ -13,53 +13,53 @@ database
     const places = [
       {
         name: "Point 1",
-        street: "Søren Frichs Vej",
-        number: "44d",
-        city: "Aarhus",
+        address: "Søren Frichs Vej, 44d Aarhus",
         zipCode: "8230",
         countryCode: 45,
-        latitude: 56.151462,
-        longitude: 10.172167
+        coordinates: {
+          latitude: 56.151462,
+          longitude: 10.172167
+        }
       },
       {
         name: "Point 2",
-        street: "R. Rebolar, Paço de Arcos",
-        number: "1",
-        city: "Oeiras",
+        address: "R. Rebolar, Paço de Arcos, 1 Oeiras",
         zipCode: "2770-148",
         countryCode: 351,
-        latitude: 38.7037483,
-        longitude: -9.300384
+        coordinates: {
+          latitude: 38.7037483,
+          longitude: -9.300384
+        }
       },
       {
         name: "Point 3",
-        street: "Korte Reguliersdwarsstraat",
-        number: "7",
-        city: "Amsterdam",
+        address: "Korte Reguliersdwarsstraat, 7 Amsterdam",
         zipCode: "1017",
         countryCode: 31,
-        latitude: 52.3659835,
-        longitude: 4.8928726
+        coordinates: {
+          latitude: 52.3659835,
+          longitude: 4.8928726
+        }
       },
       {
         name: "Point 4",
-        street: "Av. Dom João",
-        number: "43",
-        city: "Lisbon",
+        address: "Av Dom João, 43 Lisbon",
         zipCode: "1990-084",
         countryCode: 351,
-        latitude: 38.771592,
-        longitude: -9.1000007
+        coordinates: {
+          latitude: 38.771592,
+          longitude: -9.1000007
+        }
       },
       {
         name: "Point 5",
-        street: "Laplandsgade",
-        number: "4A",
-        city: "Copenhagen",
+        address: "Laplandsgade, 4A Copenhagen",
         zipCode: "2300",
         countryCode: 45,
-        latitude: 55.668998,
-        longitude: 12.6083213
+        coordinates: {
+          latitude: 55.668998,
+          longitude: 12.6083213
+        }
       }
     ];
     return Places.create(places);

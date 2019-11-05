@@ -3,19 +3,45 @@
 const { Router } = require("express");
 const router = Router();
 const Places = require("../models/places");
+const placesApi = require("../db/data.json");
 
 router.get("/", (req, res, next) => {
   res.render("index");
 });
 
-router.get("/search", (req, res, next) => {
-  Places.find()
-    .then(places => {
-      res.render("search", { places });
-    })
-    .catch(error => {
-      console.lob("an error trying to find the places", error);
-    });
+router.get("/places", (req, res, next) => {
+  res.json({
+    placesApi
+  });
 });
 
+router.get("/search", (req, res, next) => {
+  console.log("query", req.query);
+  const countryCode = req.query.countryCode;
+  const zipCode = req.query.zipCode;
+  let searchOptions = {};
+  if (countryCode) {
+    searchOptions = {
+      countryCode: req.query.countryCode
+    };
+  }
+  if (zipCode) {
+    searchOptions = {
+      zipCode: req.query.zipCode
+    };
+  }
+  Places.find(searchOptions)
+    .then(places => {
+      console.log(places);
+      res.render("search", {
+        places
+      });
+    })
+    .catch(error => {
+      console.log(
+        "there was an error finding the place by the country code",
+        error
+      );
+    });
+});
 module.exports = router;

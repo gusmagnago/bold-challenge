@@ -2,18 +2,11 @@
 
 const mongoose = require("mongoose");
 
-const placesSchema = new mongoose.Schema({
+const schema = new mongoose.Schema({
   name: {
-    type: String,
-    required: true
-  },
-  street: {
     type: String
   },
-  number: {
-    type: String
-  },
-  city: {
+  address: {
     type: String
   },
   zipCode: {
@@ -22,22 +15,14 @@ const placesSchema = new mongoose.Schema({
   countryCode: {
     type: Number
   },
-  location: {
-    type: String,
-    default: "Point"
-  },
-  coordinates: [
-    {
-      latitude: {
-        type: Number
-      },
-      longitude: {
-        type: Number
-      }
+  coordinates: {
+    latitude: {
+      type: Number
+    },
+    longitude: {
+      type: Number
     }
-  ]
+  }
 });
 
-plascesSchema.index({ location: "2dsphere" });
-
-module.exports = mongoose.model("Places", placesSchema);
+module.exports = mongoose.model("Places", schema);
