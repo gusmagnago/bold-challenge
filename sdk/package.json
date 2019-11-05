@@ -44,7 +44,7 @@
     "@mapbox/mapbox-gl-rtl-text": "0.2.1",
     "axios": "0.18.0",
     "core-js": "2.5.7",
-    "lodash": "4.17.5",
+    "lodash": "4.17.15",
     "mapbox-gl": "1.4.0",
     "regenerator-runtime": "0.12.1",
     "whatwg-fetch": "2.0.3"
