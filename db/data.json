@@ -4,49 +4,34 @@
     "address": "Søren Frichs Vej, 44d Aarhus",
     "zipCode": "8230",
     "countryCode": 45,
-    "coordinates": {
-      "latitude": 56.151462,
-      "longitude": 10.172167
-    }
+    "link": "https://goo.gl/maps/H2e1nTkFUS3UFcpx9"
   },
   {
     "name": "Point 2",
     "address": "R. Rebolar, Paço de Arcos, 1 Oeiras",
     "zipCode": "2770-148",
     "countryCode": 351,
-    "coordinates": {
-      "latitude": 38.7037483,
-      "longitude": -9.300384
-    }
+    "link": "https://goo.gl/maps/ud3JrHpLcsfFxwvP7"
   },
   {
     "name": "Point 3",
     "address": "Korte Reguliersdwarsstraat, 7 Amsterdam",
     "zipCode": "1017",
     "countryCode": 31,
-    "coordinates": {
-      "latitude": 52.3659835,
-      "longitude": 4.8928726
-    }
+    "link": "https://goo.gl/maps/2QeArqsZozYUhdgT6"
   },
   {
     "name": "Point 4",
     "address": "Av Dom João, 43 Lisbon",
     "zipCode": "1990-084",
     "countryCode": 351,
-    "coordinates": {
-      "latitude": 38.771592,
-      "longitude": -9.1000007
-    }
+    "link": "https://goo.gl/maps/HN7pJNyX9YEz3NQKA"
   },
   {
     "name": "Point 5",
     "address": "Laplandsgade, 4A Copenhagen",
     "zipCode": "2300",
     "countryCode": 45,
-    "coordinates": {
-      "latitude": 55.668998,
-      "longitude": 12.6083213
-    }
+    "link": "https://goo.gl/maps/2if45uS2zNwkC4e38"
   }
 ]

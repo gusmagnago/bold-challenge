@@ -22,6 +22,9 @@ const schema = new mongoose.Schema({
     longitude: {
       type: Number
     }
+  },
+  link: {
+    type: String
   }
 });
 

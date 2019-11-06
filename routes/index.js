@@ -6,17 +6,7 @@ const Places = require("../models/places");
 const placesApi = require("../db/data.json");
 
 router.get("/", (req, res, next) => {
-  res.render("index");
-});
-
-router.get("/places", (req, res, next) => {
-  res.json({
-    placesApi
-  });
-});
-
-router.get("/search", (req, res, next) => {
-  console.log("query", req.query);
+  // console.log("query", req.query);
   const countryCode = req.query.countryCode;
   const zipCode = req.query.zipCode;
   let searchOptions = {};
@@ -32,8 +22,8 @@ router.get("/search", (req, res, next) => {
   }
   Places.find(searchOptions)
     .then(places => {
-      console.log(places);
-      res.render("search", {
+      // console.log(places);
+      res.render("index", {
         places
       });
     })
@@ -43,5 +33,11 @@ router.get("/search", (req, res, next) => {
         error
       );
     });
+});
+
+router.get("/places", (req, res, next) => {
+  res.json({
+    placesApi
+  });
 });
 module.exports = router;

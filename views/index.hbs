@@ -1,1 +1,47 @@
-<h1>{{title}}</h1>
+<h1 class="pt-5">Search a Pick up point</h1>
+<span>
+  You can search by the zipcode, the country code, or find all the points we have around the world.<br />
+  Our locations are distributed in three countries, but we are growing fast, dont worry if you country is not here.
+</span>
+<section class="container pb-3">
+  <div class="row mt-3">
+    <div class="col">
+      <form action="/" method="GET">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Zip Code</span>
+          </div>
+          <input type="text" class="form-control" name="zipCode">
+          <button type="submit" class="btn btn-outline-dark">Search</button>
+        </div>
+      </form>
+      <form action="/" method="GET">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Country Code</span>
+          </div>
+          <input type="text" class="form-control" name="countryCode">
+          <button type="submit" class="btn btn-outline-dark">Search</button>
+        </div>
+      </form>
+      <div class="row mx-auto">
+      {{#each places}}
+      <div class="col-sm d-flex align-items-stretch">
+      <div class="card rounded m-2 border-0 shadow">
+        <div class="card-body">
+          <h5 class="card-title">{{this.name}}</h5>
+          <p class="card-text">{{this.address}}</p>
+          <div class="d-flex flex-column align-self-center">
+
+            <span>Country: {{this.countryCode}}</span><br />
+            <span>Zip Code: {{this.zipCode}}</span><br />
+            <a class="btn btn-light" href="{{this.link}}" target="_blank">Open the map</a>
+          </div>
+        </div>
+      </div>
+      </div>
+      {{/each}}
+      </div>
+    </div>
+  </div> 
+</section>
